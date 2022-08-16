@@ -343,8 +343,8 @@ fn install_zircon_prebuilt() {
     use command_ext::{dir, CommandExt, Tar};
     use commands::wget;
     const URL: &str =
-        "https://github.com/rcore-os/zCore/releases/download/prebuilt-2208/prebuilt.tar.xz";
-    let tar = Arch::X86_64.origin().join("prebuilt.tar.xz");
+        "https://github.com/rcore-os/zCore/releases/download/prebuilt-2208/prebuilt-all.tar.xz";
+    let tar = Arch::X86_64.origin().join("prebuilt-all.tar.xz");
     wget(URL, &tar);
     // 解压到目标路径
     let dir = PROJECT_DIR.join("prebuilt");
